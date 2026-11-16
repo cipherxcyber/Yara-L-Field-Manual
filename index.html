@@ -633,7 +633,6 @@ rect.d-dash{fill:none}
   <div class="bar-in">
     <a class="brand" href="#map">YARA-L field manual</a>
     <span class="crumb" id="crumb"></span>
-    <span class="barprog" id="barprog"></span>
     <button class="btn findbtn" id="findBtn" type="button"><span>Search the manual</span><kbd>/</kbd></button>
     <button class="btn" id="themeBtn" type="button" title="Switch between light and dark">Theme</button>
   </div>
@@ -817,7 +816,6 @@ metadata.product_event_type = <span class="s">"4624"</span></pre>
   <p>Read it bottom-up and it clicks: <code>#e</code> is "how many <code>$e</code> events landed in this group", <code>$user over 10m</code> groups those events per user in 10-minute windows, and <code>events</code> is the filter. The idea to hold on to is the split between <code>#e</code> (a count of events) and <code>$e</code> (the existence of at least one).</p>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m00"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m01" data-group="found">
@@ -1007,7 +1005,6 @@ user = <span class="s">"jsmith"</span> <span class="k">AND</span> metadata.event
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m01"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m02" data-group="search">
@@ -1161,7 +1158,6 @@ raw = /./ <span class="k">AND</span> parsed = <span class="k">false</span></pre>
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m02"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m03" data-group="search">
@@ -1322,7 +1318,6 @@ security_result.action = <span class="s">"BLOCK"</span>
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m03"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m04" data-group="search">
@@ -1537,7 +1532,6 @@ $x = $g1.graph.entity.asset.hostname
   <p>Filter each side by event type or entity type before the join line. If a join query is slow, shorten the overall time range before you touch the logic.</p>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m04"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m05" data-group="rules">
@@ -1664,7 +1658,6 @@ $x = $g1.graph.entity.asset.hostname
   </ul>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m05"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m06" data-group="rules">
@@ -1987,7 +1980,6 @@ $x = $g1.graph.entity.asset.hostname
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m06"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m07" data-group="rules">
@@ -2167,7 +2159,6 @@ $x = $g1.graph.entity.asset.hostname
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m07"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m08" data-group="pro">
@@ -2302,7 +2293,6 @@ $e.principal.user.userid <span class="k">in</span> %service_accounts <span class
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m08"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m09" data-group="pro">
@@ -2476,7 +2466,6 @@ $dow  = timestamp.get_day_of_week($e.metadata.event_timestamp.seconds, <span cla
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m09"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m10" data-group="pro">
@@ -2636,7 +2625,6 @@ $host = $bytes_per_host.host
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m10"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m11" data-group="pro">
@@ -2724,7 +2712,6 @@ $dept = arrays.index_to_str(array($e.principal.user.department), <span class="n"
   </ol>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m11"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m12" data-group="ops">
@@ -2817,7 +2804,6 @@ $dept = arrays.index_to_str(array($e.principal.user.department), <span class="n"
   </div>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m12"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="m13" data-group="ops">
@@ -2888,7 +2874,6 @@ python -m content_manager rules --help</pre>
   </ol>
 
   </div>
-  <label class="done-toggle"><input type="checkbox" data-done="m13"> Mark module complete</label>
 </section>
 
 <section hidden class="module" id="practice" data-group="ref">
@@ -3057,8 +3042,6 @@ principal.hostname != <span class="s">""</span>
     <p>A regex tests only the first line of a multi-line field. Add the <code>(?s)</code> flag and make it case-insensitive: <code>target.process.command_line = /(?s).*DownloadString.*/ nocase</code></p>
     </details>
   </div>
-
-  <label class="done-toggle"><input type="checkbox" data-done="practice"> Mark section complete</label>
 </section>
 
 <section hidden class="module" id="cookbook" data-group="ref">
@@ -4096,8 +4079,6 @@ metadata.product_event_type = /(Consent to application|Add service principal cre
 
   </div>
   <p class="emptynote" id="cookEmpty" hidden>No recipes match that filter.</p>
-
-  <label class="done-toggle"><input type="checkbox" data-done="cookbook"> Mark section complete</label>
 </section>
 
 <section hidden class="module" id="appendix" data-group="ref">
@@ -4414,23 +4395,6 @@ metadata.product_event_type = /(Consent to application|Add service principal cre
       : '<a class="go" href="#m00">Start with 00: ' + esc(byId.m00.title) + "</a><span>or pick any module from the map</span>";
   }
 
-  /* ---------- progress ---------- */
-  var boxes = all("input[data-done]");
-  function paintProgress(){
-    var n = 0;
-    boxes.forEach(function(b){
-      if (b.checked) n++;
-      var tile = document.querySelector('[data-tile="' + b.getAttribute("data-done") + '"]');
-      if (tile) tile.classList.toggle("done", b.checked);
-    });
-    $("barprog").textContent = n + " of " + boxes.length + " done";
-  }
-  boxes.forEach(function(box){
-    var key = "yaral-done-" + box.getAttribute("data-done");
-    if (get(key) === "1") box.checked = true;
-    box.addEventListener("change", function(){ set(key, box.checked ? "1" : "0"); paintProgress(); });
-  });
-  paintProgress();
 
   /* ---------- router ---------- */
   var current = null;
